@@ -1,0 +1,3 @@
+function revertToSnapshot-Production () {
+vmrun revertToSnapshot /home/virtual-machines/workstation/runable_vms/${1}/${1}.vmx production
+}

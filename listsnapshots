@@ -1,0 +1,6 @@
+function listsnapshots() {
+
+vmrun listSnapshots /home/virtual-machines/workstation/runable_vms/${1}/${1}.vmx 
+
+
+}

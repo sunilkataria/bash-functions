@@ -1,0 +1,3 @@
+function centos7-newvm () {
+centos7-vmware-clone $1 && sync && startvm $1 
+}

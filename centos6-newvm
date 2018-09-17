@@ -1,0 +1,4 @@
+function centos6-newvm () {
+centos6-vmware-clone $1 && sync && startvm $1 
+}
+

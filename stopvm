@@ -1,0 +1,3 @@
+function stopvm() {
+vmrun stop /home/virtual-machines/${USER}/runable_vms/${1}/$1.vmx nogui
+}

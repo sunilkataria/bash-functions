@@ -1,0 +1,5 @@
+function remove-vm() {
+
+rm -rf  /home/virtual-machines/workstation/runable_vms/${1}/
+
+}

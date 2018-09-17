@@ -1,0 +1,6 @@
+function ssh2vm () {
+export SSHPASS='qwedsa@123'
+sshpass -e ssh ${1}
+
+}
+

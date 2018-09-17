@@ -1,0 +1,8 @@
+function custom-vmware-linked-clone () {
+mkdir /home/virtual-machines/${USER}/runable_vms/${2}/
+
+#vmrun clone /home/virtual-machines/${USER}/runable_vms/${1}/${1}.vmx /home/virtual-machines/${USER}/runable_vms/${2}/${2}.vmx -cloneName=$2 linked
+vmrun clone /home/virtual-machines/${USER}/runable_vms/${1}/${1}.vmx /home/virtual-machines/${USER}/runable_vms/${2}/${2}.vmx -cloneName=$2 linked -snapshot=production
+
+}
+

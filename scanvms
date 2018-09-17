@@ -1,0 +1,20 @@
+function scanvms () {
+declare -a all_subnet
+list_of_networks=`ifconfig | grep ^[a-z] |grep -v ^lo: | awk '{print $1}' | sed 's/://' | xargs`
+for i in $list_of_networks
+do
+        cal_subnet=`ifconfig $i | grep "inet " | awk '{print $2}'  | awk -F"." '{print $1"."$2"."$3".0/24 " }'`
+
+        echo $cal_subnet | grep -q "192.168.99"
+        result=$?
+
+        if [ $result != 0 ]
+        then
+                all_subnet+=${cal_subnet}
+        fi
+
+done
+
+nmap -sP  $all_subnet
+
+}

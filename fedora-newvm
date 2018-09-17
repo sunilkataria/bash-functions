@@ -1,0 +1,4 @@
+function fedora-newvm () {
+fedora-vmware-clone $1 && sync && startvm $1 && vmrun list
+}
+

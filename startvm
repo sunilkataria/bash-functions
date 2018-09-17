@@ -1,0 +1,5 @@
+function startvm() {
+vmrun start /home/virtual-machines/${USER}/runable_vms/${1}/$1.vmx nogui
+vmrun list
+}
+

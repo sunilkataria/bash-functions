@@ -1,0 +1,9 @@
+function custom-vmware-full-clone () {
+
+vmrun deleteSnapshot /home/virtual-machines/${USER}/myclonedvms/${1}/${1}.vmx FreshlyCloned
+
+vmrun clone /home/virtual-machines/${USER}/myclonedvms/${1}/${1}.vmx /home/virtual-machines/${USER}/runable_vms/${2}/${2}.vmx -cloneName=$2 full
+
+vmrun snapshot /home/virtual-machines/${USER}/runable_vms/${2}/${2}.vmx FreshlyCloned
+
+}
